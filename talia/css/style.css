@@ -1,0 +1,338 @@
+body,html {
+	line-height: 26px;
+}
+/* NAVIGATION */
+.navbar {
+	border-radius:0;
+	background:#222;
+	font-family:'Aldrich',sans-serif;
+	text-align:center;
+	margin-bottom:0;
+	padding: 15px 0;
+}
+.navbar-nav>li {
+	transform:skew(-12deg,0deg);
+	-webkit-transform:skew(-12deg,0deg);
+	-moz-transform:skew(-12deg,0deg);
+	-o-transform:skew(-12deg,0deg);
+	-ms-transform:skew(-12deg,0deg);
+	margin:0 2px 0 0;
+	
+	/* CSS hack to soften jagged edges on the "skew" for some browsers */
+	border-left:1px solid transparent;
+	border-right:1px solid transparent;
+}
+.navbar-nav>li a {
+	font-size:18px;
+	line-height:24px;
+	padding:5px 25px;
+	color:#fff;
+	transform:skew(12deg);/* This is for the slanted background hover */
+	background:transparent;
+}
+.navbar-nav>li a:hover,.navbar-nav>li a:focus,.nav .open>a,.nav .open>a:hover,.nav .open>a:focus {
+	background:transparent;
+	color: #c0392b;
+}
+.navbar-nav>li:hover,.nav .open,.nav .open:hover,.nav .open:focus {
+	background: #fff;
+}
+.navbar-nav li:after {
+	position:absolute;
+	top:0;
+	right:-3px;/* Prevents the navigation item's background on hover doesn't overlap the dash */
+	display:block;
+	height:100%;
+	content:'';
+	border-right:3px solid #FFD600;
+}
+.navbar-nav>li:hover:after {
+	border-color:#c0392b;
+}
+.dropdown-menu {
+	border-radius:0;
+	box-shadow:0 0 1px #fff;
+	border:none;
+	padding-bottom:0;
+}
+.dropdown-menu>li>a {
+	color:#222;
+}
+.dropdown-menu>li {
+	background:transparent;
+	margin-bottom:5px;
+}
+.dropdown-menu>li:after {
+	display:none;
+	border-right:3px solid #FFD600;
+}
+.dropdown-menu {
+	background:#fff;
+}
+.dropdown-menu>li:hover {
+	background: #539bed;
+}
+.dropdown-menu>li a:hover {
+        color: #fff;
+}
+/* Color of hamburger menu */
+.navbar-toggle .icon-bar {
+	background:#FFD600;
+}
+.navbar-toggle:hover .icon-bar {
+	background:#539bed;
+}
+/* un-comment this line below to hides th "/" after the last navigation link.
+
+.navbar-nav li:last-child a:after{display: none;}
+
+*/
+
+/* HEADER */
+.jumbotron {
+	background:url(../images/header.jpg) 50% 50%;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	height:500px;/* Height of banner image */
+	margin-top:65px;/* Height of the navigation */
+	margin-bottom:0;
+}
+
+/* CONTENT AREA */
+.content-header {
+	width:0;
+	height:0;
+	border-color:rgba(255,255,255,0) #f0f0f0;
+	border-style:solid solid dashed;
+	border-width:400px 0 0 0;
+	border-left-width:1583px;
+	border-top-width:300px;
+}
+#content {
+	background:#f0f0f0;
+	padding-bottom: 50px;
+}
+/* BLOG FEED */
+.feed article {
+	margin-bottom:20px;
+}
+.feed article .excerpt {
+	background:#fff;
+	min-height:150px;
+	padding:25px;
+	border-bottom:2px solid #539bed;
+}
+.feed article .meta {
+	height:150px;
+	padding:25px;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family:'Aldrich',sans-serif;
+}
+.feed article .meta h2 {
+	margin-top:0;
+}
+.feed article .yellow .meta {
+	background:#FFD600;
+	color:#333;
+}
+.feed article .red .meta {
+	background:#c0392b;
+	color:#333;
+}
+.left {
+	float:left;
+	margin:0 10px 0 0;
+	padding:1px;
+	border: 1px solid rgba(83,155,237,0.5);
+}
+/* FOOTER */
+footer {
+	background:#222 url('../images/bg.jpg');
+	color:#fff;
+}
+.footer-header {
+	width:0;
+	height:400px;
+	padding-left:100%;
+	padding-top:300px;
+	overflow:hidden;
+}
+.footer-header:after {
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	margin-left:-2000px;
+	margin-top:-300px;
+	border-left:2000px solid transparent;
+	border-top:300px solid #f0f0f0;
+}
+footer .logo {
+	position:relative;
+	top:-150px;
+}
+footer .row {
+	position:relative;
+	top:-80px;
+}
+footer .copyright {
+	margin-top:35px;
+	text-align: center;
+}
+/* TEXT STYLES */
+h1#page-header {
+	background-size:66px 132px;
+	vertical-align:bottom;
+	position:relative;
+	text-transform:uppercase;
+	font-size:120px;
+	color:#222;
+	border-left:10px solid #FFD600;
+	text-indent:30px;
+	font-family:'Aldrich',sans-serif;
+	margin:0 0 45px;
+	text-shadow:1px 1px 0px rgba(255,214,0,0.8);
+	text-shadow:2px 1px 1px rgba(83,155,237,0.8);
+}
+h2 {
+	font-size: 26px;
+}
+
+/* Add this class to any element with text for Aldrich font */
+.tech {
+	font-family:'Aldrich',sans-serif;
+}
+
+.faith {
+	margin:25px 0 10px 0;
+	font-family:'Aldrich',sans-serif;
+	background:url('../images/faithBadge.png') left center no-repeat;
+	background-size:32px 50px;
+	padding:10px 0;
+	text-indent:35px;
+}
+.faithYellow {
+	margin:0 0 10px 0;
+	font-family:'Aldrich',sans-serif;
+	background:url('../images/faithBadgeYellow.png') left center no-repeat;
+	background-size:32px 50px;
+	padding:10px 0;
+	text-indent:35px;
+}
+ol,ul {
+	margin-bottom:25px;
+}
+ol li,ul li {
+	margin-bottom:10px;
+}
+ul.social li {
+	color:#FFD600;
+	display:inline;
+	float:left;
+	list-style:none;
+	padding:8px;
+}
+ul.social li a:hover {
+	color:#FFD600!important;
+}
+blockquote {
+	padding:14px;
+	margin:10px 0;
+	border-left:4px solid #FFD600!important;
+}
+blockquote p.source {
+	font-style:italic;
+	padding-top:15px;
+}
+.red-sub-heading {
+	display:inline-block;
+	background:rgba(197,21,21,0.8);
+	padding:15px;
+	text-transform:uppercase;
+	margin:15px 0;
+	font-family: 'Aldrich',sans-serif;
+}
+
+/* Over-writing Bootstrap button styles */
+.btn {
+	border-radius: 0;
+}
+.btn-primary {
+	background:rgba(197,21,21,0.8);
+	border-color:rgba(197,21,21,0.8); /* Using "border-color" rather than "border" to overwrite Bootstrap's styling */
+	padding:15px 25px;
+	text-transform:uppercase;
+	font-family:'Aldrich',sans-serif;
+	font-size:14px;
+}
+.btn-primary:hover,.btn-primary:focus {
+	background-color:transparent;
+	border-color:rgba(197,21,21,0.8);
+	color:rgba(197,21,21,0.8);
+}
+a:hover,a:focus {
+	color: #428bca;
+}
+/* MEDIA QUERIES */
+@media (max-width:992px) {
+	.jumbotron {
+		background-position:75% 50%;
+	}
+	h1#page-header {
+			text-indent:30px;
+			font-size:90px;
+			margin:0;
+	}
+}
+@media (max-width:767px) {
+	.jumbotron {
+		margin:0;
+	}
+	.navbar {
+		padding:0;
+	}
+	.navbar-nav>li,.navbar-nav>li a {
+		transform:none;
+	}
+	.navbar-nav li:after {
+		display:none;
+	}
+	.dropdown-menu {
+		padding-bottom:5px
+	}
+	.dropdown-menu>li>a {
+		margin:0 4px;
+	}
+	.dropdown-menu>li>a:hover {
+		background:#FFD600;
+                color: #222;
+	}
+	h1#page-header {
+		font-size:60px;
+	}
+	#content {
+		padding:0 15px 65px;
+	}
+	.footer-header {
+		display:none;
+	}
+	footer {
+		padding-top:50px;
+	}
+	footer .logo,footer .row {
+		top:0;
+		margin-bottom:25px;
+	}
+}
+@media (max-width:480px) {
+	#content {
+		padding:0 15px 45px;
+	}
+	h1#page-header {
+		font-size:40px;
+		text-indent: 20px;
+	}
+}
