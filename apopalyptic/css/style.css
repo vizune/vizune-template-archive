@@ -1,0 +1,296 @@
+﻿body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  background: #1b1f28 url('../images/bg.gif') 0 0 repeat-x;
+  /*background-attachment: fixed; */ /* Optional: this CSS line changes the background image to "fixed" which follows as you scroll */
+}
+
+/* This changes the max-width of the Bootstrap's container */
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    border-radius: 0;
+    border: none;
+}
+
+nav {
+	width: 100%;
+	height: 55px;
+	background: #e5e5e5;
+	padding: 0;
+	margin: 15px 0 0 0;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+    background: #ee318e;
+    text-align: center;
+    height: 55px;
+    padding: 0 20px;
+    line-height: 55px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.logo {
+	background: #ee318e url('../images/logo.png') 50% 50% no-repeat;
+	float: left;
+	width: 225px; /* Change width to the dimensions of your logo image */
+	height: 55px;
+    text-indent: -99999px;
+}
+
+.logo:hover, .logo:focus {background: #4b4adf url('../images/logo.png') center center no-repeat;} 
+
+.logo a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-indent: -9999px
+}
+
+nav ul {
+	max-width: 730px;
+	float: right;
+	list-style: none;
+	margin: 0;
+}
+ 
+.nav>li>a {
+	color: #676767;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	padding: 0 15px;
+	border-bottom: 4px solid #ee318e;
+    display: block;
+    line-height: 52px;
+    vertical-align: middle;
+    height: 55px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	text-decoration: none;
+	color: #ee318e;
+	background: #444348;
+    outline: none;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    border-color: inherit;
+    background: #444348;
+}
+
+.nav>li>a.yellow, .nav>li>a.yellow {
+	border-bottom: 4px solid #ffd800;
+}
+
+.nav>li>a.yellow:hover, .nav>li>a.yellow:focus, .nav .open>a.yellow, .nav .open>a.yellow:focus, .nav .open>a.yellow:hover {
+	color: #ffd800;
+}
+
+.nav>li>a.turquoise, .nav>li>a.turquoise {
+	border-bottom: 4px solid #41dfd9;
+}
+
+.nav>li>a.turquoise:hover, .nav>li>a.turquoise:focus, .nav .open>a.turquoise, .nav .open>a.turquoise:focus, .nav .open>a.turquoise:hover {
+	color: #41dfd9;
+}
+
+.nav>li>a.purple, .nav>li>a.purple {
+	border-bottom: 4px solid #9076ff;
+}
+
+.nav>li>a.purple:hover, .nav>li>a.purple:focus, .nav .open>a.purple, .nav .open>a.purple:focus, .nav .open>a.purple:hover  {
+	color: #9076ff;
+}
+
+.nav>li>a.blue, .nav>li>a.blue {
+	border-bottom: 4px solid #4a70ff;
+}
+
+.nav>li>a.blue:hover, .nav>li>a.blue:focus, .nav .open>a.blue, .nav .open>a.blue:focus, .nav .open>a.blue:hover  {
+	color: #4a70ff;
+}
+
+.dropdown-menu {
+    background: #444348;
+    border-radius: 0;
+    padding: 8px 0;
+}
+
+.dropdown-menu>li>a {
+    color: #e5e5e5;
+}
+
+.dropdown-header {
+    color: #ffd800;
+}
+
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #e5e5e5;
+    background: #ee318e;
+}
+
+.dropdown-menu .divider {
+    background-color: #41dfd9;
+}
+
+.navbar-toggle {
+    margin-top: 11px;
+    margin-bottom: 10px;
+}
+
+.navbar-toggle .icon-bar {
+    background: #ee318e;
+}
+
+@media screen and (min-width: 768px) {
+    .nav>li {
+	    display: inline;
+	    margin: 0;
+	    letter-spacing: 1px;
+	    float: left;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        background: #444348;
+        margin: 0 -15px;
+    }
+    .nav>li>a {
+        color: #e5e5e5;
+    }
+    .dropdown-menu {
+        transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+    /* Reduces spacing on navigation links to prevent stacking on a new line for smaller desktops/tablets */
+    .nav>li>a {
+        letter-spacing: 0;
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+/* HEADER */
+.container .jumbotron {
+    border-radius: 0;
+    background: url('../images/header.jpg') 50% 50% no-repeat;
+    height: 500px;
+}
+
+
+/* CONTENT */
+  
+h1 {
+  margin: 10px 0 30px;
+  font-size: 300%;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+  
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+#content {
+    background: #fff;
+    padding: 25px;
+}
+
+#content h2 {
+	background: url('../images/h2.gif') 0 5px no-repeat;
+	text-indent: 40px;
+    line-height: 40px;
+	font-size: 24px;
+}
+
+.avatar {
+	margin: 0 6px 4px 0;
+    border: 3px solid #ee318e;
+	padding: 2px;
+    float: left;
+}
+
+a {
+  text-decoration: none;
+  color: #4a29d9;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #4a29d9;   
+}
+
+/* FOOTER */
+
+footer {
+  margin: 25px 0;
+}
+
+footer .row {
+    display: flex;
+    overflow: hidden;
+}
+
+footer a, footer a:hover {color: #ffd800;}
+
+footer .widget {
+	background: #111;
+    color: #fff;
+    padding: 15px 20px;
+    height: 100%;
+}
+
+footer h2 {
+	margin: 0;
+	padding: 3px 0;
+    text-align: center;
+}
+
+footer h2.pink {
+    background: #ee318e;
+    color:#212121;
+}
+
+footer h2.yellow {
+    background: #ffd800;
+    color:#212121;
+}
+
+footer h2.blue {
+    background: #41dfd9;
+    color:#212121;
+}
+
+footer ul {list-style: square;}
+
+footer ul li {padding-bottom: 7px;}
+
+
+.buttons {
+    padding: 0;
+    text-align: center;
+}
+.buttons li {
+	display: inline-block;
+	list-style: none;
+	border: 2px solid transparent;
+    padding: 0;
+    margin: 5px 3px;
+}
+.buttons li:hover {
+	border: 2px solid #ffd800;
+}
