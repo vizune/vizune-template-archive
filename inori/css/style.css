@@ -1,4 +1,13 @@
-﻿body, html {
+﻿/* CSS VARIABLES */
+:root {
+    --hibiscus: #b94951;
+    --toadstool: #b82731;
+    --stizza: #870b0c;
+    --dark: #111;
+    --stone: #3D4351;
+    --grey: #999;
+}
+body, html {
 	height: 100%;
 }
 body {
@@ -7,10 +16,10 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #3D4351;
+    color: var(--stone);
 }
 a, a:hover, a:focus {
-    color: #b82731;
+    color: var(--toadstool);
 }
 #wrapper.container {
     padding: 0;
@@ -25,29 +34,44 @@ a, a:hover, a:focus {
     background: transparent;
     margin: 0 auto;
     border-radius: 0;
-    max-width: 1200px;
+    width: 100%;
     border: none;
     float: left;
+}
+.navbar-collapse {
+    border: none;
+    box-shadow: none;
+    float: right;
+}
+.navbar-toggle {
+    float: right;
+    background: #fff;
+}
+.navbar-toggle:hover {
+    background: var(--stizza);
+}
+.navbar-toggle .icon-bar {
+    background: var(--stizza)
+}
+.navbar-toggle:hover .icon-bar {
+    background: #fff;
 }
 .navbar-brand {
 	color: #fff;
     font-size: 30px;
     text-transform: uppercase;
-    margin: 20px 15px;
-}
-.navbar-brand:hover {
-    color: #3da927;
+    margin: 0 15px;
 }
 .logo {
-	background:url('../img/logo.png') 50% 50% no-repeat;
-	text-indent:-99999px;
+	background: url('../img/logo.png') 50% 50% no-repeat;
+	text-indent: -99999px;
 	display:block;
-	width:210px; /* Update this value to the width of your logo */
-    height:50px;
-	padding:0;
+	width: 210px; /* Update this value to the width of your logo */
+    height: 50px;
+	padding: 0;
 }
 .nav>li>a {
-    background: #870b0c;
+    background: var(--stizza);
     color: #fff;
     text-transform: uppercase;
     font-size: 18px;
@@ -56,27 +80,21 @@ a, a:hover, a:focus {
 }
 .nav>li>a:focus, .nav>li>a:hover, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background: #fff;
-    color: #870b0c;
+    color: var(--stizza);
     text-decoration: none;
 }
-
-
 .topnav {padding-right: 10px;}
-
-
 /* JUMBOTRON (HEADER) */
 .container .jumbotron, .container-fluid .jumbotron {
     border-radius: 0;
 }
-
 .jumbotron {
     background: url('../img/header.png') 50% 50% no-repeat;
     height: 500px; /* Adjust this value to the height of your header image */
     padding: 0;
 	margin: 0;
-    border-bottom: 4px solid #870b0c;
+    border-bottom: 4px solid var(--stizza);
 }
-
 /* CONTENT */
 #content {
     padding: 50px 30px 90px;
@@ -86,43 +104,43 @@ h1, h2 , h3, h4, h5 {
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     text-transform: uppercase;
     padding: 10px 0;
-    color: #222;
+    color: var(--dark);
     display: inline-block;
     margin: 15px 0;
 }
-
 h1 {
     background: url('../img/petals.png') left bottom no-repeat;
     border: none;
     padding: 0 0 0 120px;
     margin: 0 0 25px;
 }
-
 h2 {
-    border-left: 5px solid #222;
+    border-left: 5px solid var(--dark);
     padding: 10px 15px;
 }
-
 .avatar {
-	margin: 0 6px 4px 0;
-    border: 3px solid #b94951;
+	margin: 6px 6px 0 0;
+    border: 3px solid var(--hibiscus);
 	padding: 2px;
     float: left;
 }
+.avatar-wrapper {
+    min-height: 110px;
+}
 /* FOOTER */
 footer {
-	background: #111;
+	background: var(--dark);
 	width: 100%;
-	color: #999;
+	color: var(--grey);
     font-size: 14px;
     padding: 25px 0;
 }
 footer h2 {
     font-weight: normal;
     text-transform: uppercase;
-    color: #b94951;
+    color: var(--hibiscus);
     margin: 0 0 25px;
-    background: #111;
+    background: var(--dark);
     padding: 10px 15px;
     font-size: 20px;
     text-align: center;
@@ -131,7 +149,6 @@ footer h2 {
     z-index: 10;
     border: none;
 }
-
 footer h2:before {
     content: '';
     background: url('../img/mask.png');
@@ -144,15 +161,13 @@ footer h2:before {
     left: 0;
     z-index: -1;
 }
-
 footer a {
     color: #fff;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted var(--grey);
 }
-
 footer a:hover {
-    color: #b94951;
-    border-bottom: 1px solid #b94951;
+    color: var(--hibiscus);
+    border-bottom: 1px solid var(--hibiscus);
     text-decoration: none;
 }
 footer ul li {
@@ -168,14 +183,14 @@ footer ul.links li {
 footer ul.links li a {
     text-transform: uppercase;
     color: #fff;
-    border-bottom: 1px dotted #999;
+    border-bottom: 1px dotted var(--grey);
     letter-spacing: 1px;
     padding-bottom: 5px;
 }
 footer ul.links li a:hover {
     text-decoration: none;
-    color: #b94951;
-    border-bottom: 1px solid #b94951;
+    color: var(--hibiscus);
+    border-bottom: 1px solid var(--hibiscus);
 }
 .buttons {
     padding: 0;
@@ -187,35 +202,21 @@ footer ul.links li a:hover {
 	border: 2px solid transparent;
 }
 .buttons li:hover {
-	border: 2px solid #b94951;
+	border: 2px solid var(--hibiscus);
 }
 /* MEDIA QUERIES */
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .navbar {
-        width: 100%;
+        width: auto;
+        max-width: 1200px;
     }
-    .navbar-brand {margin: 0 15px;}
+    .navbar-brand {
+        margin: 20px 15px;
+    }
     .navbar-collapse {
-        border: none;
-        box-shadow: none;
-        float: right;
-    }
-    .navbar-toggle {
-        float: right;
-        background: #fff;
-    }
-    .navbar-toggle:hover {
-        background: #870b0c;
-    }
-    .navbar-toggle .icon-bar {
-        background: #870b0c;
-    }
-    .navbar-toggle:hover .icon-bar {
-        background: #fff;
+        float: none;
     }
 }
-
 /* CSS for high-resolution devices */
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
 only screen and (-moz-min-device-pixel-ratio: 1.5),

@@ -1,14 +1,24 @@
-﻿body, html {
+﻿/* CSS VARIABLES */
+:root {
+    --navy: #040240;
+    --yale: #2e458e;
+    --cerulean: #007bb4;
+    --cyan: #0ea8ef;
+    --dark: #212121;
+    --medium: #999;
+    --light: #ccc;
+}
+body, html {
 	height: 100%;
 }
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
     line-height: 24px;
-    color: #3D4351;
+    color: var(--dark);
 }
 a, a:hover, a:focus {
-    color: #007bb4;
+    color: var(--cerulean);
 }
 #wrapper {
     min-height: 100%;
@@ -16,7 +26,7 @@ a, a:hover, a:focus {
 }
 /* NAVIGATION */
 .navbar {
-    background: #040240;
+    background: var(--navy);
     margin: 0;
     border-radius: 0;
 	border: 0;
@@ -28,27 +38,31 @@ a, a:hover, a:focus {
     text-transform: uppercase;
 }
 .navbar-brand:hover {
-    color: #007bb4;
+    color: var(--cerulean);
 }
 .logo {
-	background:url('../img/logo.png') 70% 50% no-repeat;
-	text-indent:-99999px;
-	display:block;
-	width:210px; /* Update this value to the width of your logo */
-    height:50px;
-	padding:0;
+	background: url('../img/logo.png') 70% 50% no-repeat;
+	text-indent: -99999px;
+	display: block;
+	width: 210px; /* Update this value to the width of your logo */
+    height: 50px;
+	padding: 0;
+    margin-left: 10px;
+    position: absolute;
+    top: 260px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /* Remove this CSS if you don't want center aligned navigation links */
 .navbar-nav {
 	float: none;
+    text-align: left;
 }
-
 .navbar-nav>li {
 	float: none;
-	display: inline-block;
+	display: block;
 }
 /* End of center aligned navigation links */
-
 .nav>li>a {
     color: #fff;
     text-transform: uppercase;
@@ -60,19 +74,19 @@ a, a:hover, a:focus {
 }
 .nav>li>a:focus, .nav>li>a:hover {
     background: none;
-    border-top: 3px solid #0ea8ef;
-    border-bottom: 3px solid #0ea8ef;
-    color: #0ea8ef;
+    border-top: 3px solid var(--cyan);
+    border-bottom: 3px solid var(--cyan);
+    color: var(--cyan);
     text-decoration: none;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
     background: transparent;
-    color: #0ea8ef;
-    border-top: 3px solid #0ea8ef;
-    border-bottom: 3px solid #0ea8ef;
+    color: var(--cyan);
+    border-top: 3px solid var(--cyan);
+    border-bottom: 3px solid var(--cyan);
 }
 .dropdown-menu {
-    background: #040240;
+    background: var(--navy);
     border-radius: 0;
 }
 .dropdown-menu>li>a {
@@ -80,22 +94,22 @@ a, a:hover, a:focus {
     border-left: 5px solid transparent;
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    background: #007bb4;
+    background: var(--cerulean);
 	color: #fff;
 }
 .dropdown-menu .divider {
-    background: #ccc;
+    background: var(--light);
 }
 .dropdown-header {
-    color: #ccc;
+    color: var(--light);
 }
 /* Colour of hamburger icon */
 .navbar-toggle .icon-bar {
-    background: #0ea8ef;
+    background: var(--cyan);
 }
 /* JUMBOTRON (HEADER) */
 .jumbotron {
-    background: url('../img/header.jpg') 50% 50% no-repeat;
+    background: url('../img/header.jpg') 70% 50% no-repeat;
 	background-size: cover;
     height: 450px; /* Adjust this value to the height of your header image */
     margin: 0;
@@ -108,42 +122,46 @@ a, a:hover, a:focus {
 h1, h2 , h3, h4, h5 {
     font-family: 'Quicksand', sans-serif;
     text-transform: uppercase;
-    color: #2e458e;
+    color: var(--yale);
 }
 h1 {
 	margin-bottom: 30px;
     border-bottom: 2px solid #ddd;
-    text-align: center;
+    text-align: left;
     padding-bottom: 10px;
 }
 h4 {
 	margin: 15px 0 5px;
 }
+.avatar-wrapper {
+    min-height: 110px;
+}
 .avatar {
-	margin: 0 6px 4px 0;
-    border: 3px solid #141649;
+	margin: 5px 8px 0 0;
+    border: 3px solid var(--navy);
 	padding: 2px;
     float: left;
 }
 /* FOOTER */
 footer {
-	background: #212121;
+	background: var(--dark);
 	width: 100%;
-	color: #999;
+	color: var(--light);
     font-size: 14px;
-    padding: 25px 0;
-    border-bottom: 15px solid #0ea8ef;
+    padding: 40px 0;
+    border-bottom: 15px solid var(--yale);
 }
-
+footer .widget + .widget {
+    margin-top: 40px;
+}
 footer h2 {
     font-weight: normal;
     text-transform: uppercase;
     color: #fff;
     margin: 0 0 25px;
-    /*border-left: 4px solid #f7af3b;
-    background: #333;*/
-    padding: 0;
-    font-size: 20px;
+    background: var(--yale);
+    padding: 2px 5px;
+    font-size: 24px;
     border: none;
 }
 footer ul li {
@@ -158,15 +176,15 @@ footer ul.links li {
 }
 footer ul.links li a {
     text-transform: uppercase;
-    color: #999;
-    border-bottom: 1px dotted #999;
+    color: var(--light);
+    border-bottom: 1px dotted var(--light);
     letter-spacing: 1px;
     padding-bottom: 5px;
 }
 footer ul.links li a:hover {
     text-decoration: none;
-    color: #0ea8ef;
-    border-bottom: 1px solid #0ea8ef;
+    color: var(--cyan);
+    border-bottom: 1px solid var(--cyan);
 }
 .buttons {
     padding: 0;
@@ -178,13 +196,30 @@ footer ul.links li a:hover {
 	border: 2px solid transparent;
 }
 .buttons li:hover {
-	border: 2px solid #007bb4;
+	border: 2px solid var(--cerulean);
 }
 /* MEDIA QUERIES */
-@media screen and (max-width: 768px) {
-    .logo {margin-left: 10px;}
-    .jumbotron {background-position: 70% 50%}
-    .widget {margin: 0 15px 40px;}
-    .navbar-nav {text-align: left;}
-    .navbar-nav>li {display: block;}
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-left: 0;
+        position: static;
+        top: unset;
+        left: unset;
+        transform: none;
+    }
+    .jumbotron {
+        background-position: 50% 50%;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav>li {
+        display: inline-block;
+    }
+    h1 {
+        text-align: center;
+    }
+    footer .widget + .widget {
+        margin-top: 0;
+    }
 }
