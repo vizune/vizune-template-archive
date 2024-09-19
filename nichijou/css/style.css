@@ -43,6 +43,7 @@ img {
 
 /* SIDEBAR */
 #home {
+	height: 230px;
 	width:100%;
 	position:static;
 	margin:0;
@@ -51,7 +52,10 @@ img {
 	background:var(--light) url('../images/nichijou.gif') right bottom no-repeat;
 	color: var(--orange);
 	overflow:hidden;
-	background-position: right bottom;
+	background-position: center bottom;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 #home h1 {
 	width:200px;
@@ -61,19 +65,22 @@ img {
 /* NAVIGATION */
 #nav ul {
 	list-style:none;
-	padding:0;
+	padding: 0;
+	margin: 0;
 }
 #home img {
 	width:100%;
-	max-width:200px;
-		height:74px;
 }
 #nav li {
 	float:left;
 	font-size:2rem;
 	font-weight:bold;
 	line-height:1.5;
-	margin:1rem 0 1rem 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+#nav li + li {
+	margin-left: 2rem;
 }
 #nav li a {
 	display:block;
@@ -254,6 +261,7 @@ a img {
 		height:100%;
 		width:30%;
 		padding:5% 3% 10%;
+		background-position: right bottom;
 		position:fixed;
 		top:0;
 		left:0;
@@ -269,6 +277,9 @@ a img {
 		line-height:3.6rem;
 		margin:0;
 		float:none;
+	}
+	#nav li + li {
+		margin-left: 0;
 	}
 	#content {
 		max-width:60%;
