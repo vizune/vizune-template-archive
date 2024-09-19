@@ -9,6 +9,9 @@
 	--white: #ffffff;
 }
 /* UNIVERSAL */
+html {
+	font-size: 100%;
+}
 body {
 	color: var(--dark);
 	font-family: 'Questrial', sans-serif;
